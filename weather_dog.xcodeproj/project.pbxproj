@@ -319,7 +319,7 @@
 		C0EA63D3237B4F8B009DAB86 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"weather_dog/Preview Content\"";
 				DEVELOPMENT_TEAM = 95TXKAQ9ZU;
@@ -339,7 +339,7 @@
 		C0EA63D4237B4F8B009DAB86 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"weather_dog/Preview Content\"";
 				DEVELOPMENT_TEAM = 95TXKAQ9ZU;

@@ -89,7 +89,7 @@
                                 <state key="normal" backgroundImage="magnifyingglass" catalog="system"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPc-po-UAI">
-                                <rect key="frame" x="20" y="67" width="43" height="33"/>
+                                <rect key="frame" x="27" y="66.5" width="37" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Button" backgroundImage="location.circle.fill" catalog="system"/>
