@@ -10,7 +10,7 @@
         <!--Weather View Controller-->
         <scene sceneID="9Y3-YP-tUj">
             <objects>
-                <viewController id="rwN-Du-dAz" customClass="WeatherViewController" customModule="weather_dog" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="rwN-Du-dAz" customClass="WeatherViewController" customModule="weather_dog" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NIc-cB-Zjo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -135,12 +135,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxG-j9-Ppa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="85.507246376811594" y="-135.26785714285714"/>
+            <point key="canvasLocation" x="209" y="-135"/>
         </scene>
         <!--Reminders-->
         <scene sceneID="6LJ-nZ-K7r">
             <objects>
-                <tableViewController id="V4F-WX-jfe" sceneMemberID="viewController">
+                <tableViewController hidesBottomBarWhenPushed="YES" id="V4F-WX-jfe" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GB1-og-bS2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -182,7 +182,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFN-m6-oxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="813" y="-135"/>
+            <point key="canvasLocation" x="832" y="-135"/>
         </scene>
         <!--Add Reminder-->
         <scene sceneID="ugk-wU-nZT">
@@ -223,7 +223,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jb-h0-nho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1562" y="-135"/>
+            <point key="canvasLocation" x="1457" y="-135"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="kRu-TF-HQM">
@@ -241,7 +241,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BEQ-Db-0gS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="86" y="-852"/>
+            <point key="canvasLocation" x="-661" y="-135"/>
         </scene>
         <!--Add Reminder Navigation Controller-->
         <scene sceneID="PpJ-gC-q9t">
@@ -259,7 +259,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Axm-xg-zGI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="877" y="-852"/>
+            <point key="canvasLocation" x="812" y="-1136"/>
         </scene>
     </scenes>
     <resources>
