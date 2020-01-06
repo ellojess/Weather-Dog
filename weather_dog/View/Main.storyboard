@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rwN-Du-dAz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="982-BJ-yev">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,9 +10,9 @@
         <!--Weather View Controller-->
         <scene sceneID="9Y3-YP-tUj">
             <objects>
-                <viewController hidesBottomBarWhenPushed="YES" id="rwN-Du-dAz" customClass="WeatherViewController" customModule="weather_dog" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NIc-cB-Zjo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                <viewController id="rwN-Du-dAz" customClass="WeatherViewController" customModule="weather_dog" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="NIc-cB-Zjo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="gS9-yx-2If">
@@ -114,7 +114,7 @@
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="V4F-WX-jfe" kind="push" id="Yqh-Yq-xjW"/>
+                                    <segue destination="V4F-WX-jfe" kind="modal" id="Yqh-Yq-xjW"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -135,14 +135,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dxG-j9-Ppa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="209" y="-135"/>
+            <point key="canvasLocation" x="513.04347826086962" y="-135.26785714285714"/>
         </scene>
         <!--Reminders-->
         <scene sceneID="6LJ-nZ-K7r">
             <objects>
                 <tableViewController hidesBottomBarWhenPushed="YES" id="V4F-WX-jfe" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GB1-og-bS2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
@@ -175,14 +175,14 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="kpW-Z8-8IB">
                             <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="W79-Wd-5l6" kind="presentation" id="iuA-k3-wPg"/>
+                                <segue destination="jYV-t0-ugH" kind="presentation" id="8yv-KZ-VPO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFN-m6-oxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="832" y="-135"/>
+            <point key="canvasLocation" x="1289.8550724637682" y="-135.26785714285714"/>
         </scene>
         <!--Add Reminder-->
         <scene sceneID="ugk-wU-nZT">
@@ -193,12 +193,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter reminder for later" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L2c-Ya-equ">
-                                <rect key="frame" x="20" y="89" width="374" height="34"/>
+                                <rect key="frame" x="20" y="33" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="lZx-nb-LRS">
-                                <rect key="frame" x="0.0" y="131" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="75" width="414" height="216"/>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -223,43 +223,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jb-h0-nho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1457" y="-135"/>
+            <point key="canvasLocation" x="2055.072463768116" y="-135.26785714285714"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="kRu-TF-HQM">
+        <scene sceneID="ldE-c3-as4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yPL-ob-ZFE" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="982-BJ-yev" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Qbu-Vf-Jop">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="3ma-Fd-2Qv">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="rwN-Du-dAz" kind="relationship" relationship="rootViewController" id="QwZ-Wc-u0k"/>
+                        <segue destination="rwN-Du-dAz" kind="relationship" relationship="rootViewController" id="sQe-ap-lLm"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BEQ-Db-0gS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bgw-eT-NND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-661" y="-135"/>
-        </scene>
-        <!--Add Reminder Navigation Controller-->
-        <scene sceneID="PpJ-gC-q9t">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="W79-Wd-5l6" userLabel="Add Reminder Navigation Controller" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="o4s-va-O8c">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="jYV-t0-ugH" kind="relationship" relationship="rootViewController" id="vWR-CA-UuN"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Axm-xg-zGI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="812" y="-1136"/>
+            <point key="canvasLocation" x="-397.10144927536237" y="-135.26785714285714"/>
         </scene>
     </scenes>
     <resources>
