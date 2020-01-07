@@ -28,8 +28,26 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
     
     // access delegate when return button is pressed by user 
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchTextField.endEditing(true)
         print(searchTextField.text!)
         return true
     }
+    
+    // validate what user is typing, make sure it's not an empty string
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != ""{
+            return true
+        } else {
+            textField.placeholder = "Type something here"
+            return false
+        }
+    }
+    
+    // delegate notified when textfield is done editing
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        // use searchTextField.text to get the weather for that city 
+        searchTextField.text = ""
+    }
+    
 
 }
