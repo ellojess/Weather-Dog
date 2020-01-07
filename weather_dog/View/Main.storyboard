@@ -81,7 +81,7 @@
                                 <color key="backgroundColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="go"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" returnKeyType="go"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gPc-po-UAI">
                                 <rect key="frame" x="20" y="98.5" width="37" height="33"/>
@@ -172,7 +172,7 @@
                         <barButtonItem title="Item" id="cOV-qK-rS2"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Reminders" id="hgR-f2-VmZ">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="q8P-pz-yk9">
+                        <barButtonItem key="leftBarButtonItem" title="Home" id="q8P-pz-yk9">
                             <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
                                 <segue destination="rwN-Du-dAz" kind="push" id="QOg-c9-CUi"/>
@@ -255,7 +255,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bgw-eT-NND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-397.10144927536237" y="-135.26785714285714"/>
+            <point key="canvasLocation" x="-249" y="-135"/>
         </scene>
     </scenes>
     <resources>
@@ -266,7 +266,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Yqh-Yq-xjW"/>
-        <segue reference="QOg-c9-CUi"/>
+        <segue reference="sQe-ap-lLm"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
