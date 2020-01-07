@@ -105,7 +105,7 @@
                                     <color key="titleColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="V4F-WX-jfe" kind="push" id="Yqh-Yq-xjW"/>
+                                    <segue destination="V4F-WX-jfe" kind="show" id="Yqh-Yq-xjW"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YlT-tg-Zgj">
@@ -217,11 +217,14 @@
                         <viewLayoutGuide key="safeArea" id="3OH-6L-Ky6"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Reminder" id="d8T-Cc-zqJ">
-                        <barButtonItem key="leftBarButtonItem" title="Home" id="ImC-Sg-DIQ">
+                        <barButtonItem key="leftBarButtonItem" id="ImC-Sg-DIQ">
                             <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="tkx-U6-w5m">
                             <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="V4F-WX-jfe" kind="push" id="Bas-dB-8zl"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO"/>
@@ -258,5 +261,8 @@
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="sun.max" catalog="system" width="64" height="62"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Bas-dB-8zl"/>
+    </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
