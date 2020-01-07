@@ -22,6 +22,12 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
         
         searchTextField.delegate = self
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose any resources that can be recreated
+    }
+    
     @IBAction func searchPressed(_ sender: UIButton) {
         print(searchTextField.text!)
     }
@@ -48,6 +54,10 @@ class WeatherViewController: UIViewController, UITextFieldDelegate {
         // use searchTextField.text to get the weather for that city 
         searchTextField.text = ""
     }
+    
+    @IBAction func checkBoxTapped(_ sender: UIButton) {
+    }
+    
     
 
 }

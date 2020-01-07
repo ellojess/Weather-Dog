@@ -140,7 +140,7 @@
         <!--Reminders-->
         <scene sceneID="6LJ-nZ-K7r">
             <objects>
-                <tableViewController modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" clearsSelectionOnViewWillAppear="NO" id="V4F-WX-jfe" sceneMemberID="viewController">
+                <tableViewController modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" clearsSelectionOnViewWillAppear="NO" id="V4F-WX-jfe" customClass="Reminders" customModule="weather_dog" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleAspectFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="GB1-og-bS2">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -152,6 +152,17 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xLq-Be-dds" id="XI5-wu-sEJ">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hY-YY-k5U">
+                                            <rect key="frame" x="20" y="5" width="30" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button" image="UnCheckbox"/>
+                                            <state key="selected" image="Checkbox"/>
+                                            <connections>
+                                                <action selector="checkBoxTapped:" destination="BVA-i5-LCs" eventType="touchUpInside" id="bRh-75-Xeq"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
                                 </tableViewCellContentView>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="w4B-yB-24J">
@@ -188,6 +199,7 @@
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TFN-m6-oxb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="BVA-i5-LCs" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1289.8550724637682" y="-135.26785714285714"/>
         </scene>
@@ -259,6 +271,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Checkbox" width="60" height="60"/>
+        <image name="UnCheckbox" width="60" height="60"/>
         <image name="background" width="662" height="662"/>
         <image name="location.circle.fill" catalog="system" width="64" height="60"/>
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
@@ -266,7 +280,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Yqh-Yq-xjW"/>
-        <segue reference="sQe-ap-lLm"/>
+        <segue reference="QOg-c9-CUi"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
