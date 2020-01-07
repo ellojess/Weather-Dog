@@ -174,6 +174,9 @@
                     <navigationItem key="navigationItem" title="Reminders" id="hgR-f2-VmZ">
                         <barButtonItem key="leftBarButtonItem" title="Back" id="q8P-pz-yk9">
                             <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <segue destination="rwN-Du-dAz" kind="push" id="QOg-c9-CUi"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="kpW-Z8-8IB">
                             <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -262,7 +265,8 @@
         <image name="sun.max" catalog="system" width="64" height="62"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Bas-dB-8zl"/>
+        <segue reference="Yqh-Yq-xjW"/>
+        <segue reference="QOg-c9-CUi"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
