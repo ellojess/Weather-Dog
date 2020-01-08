@@ -8,19 +8,27 @@
 
 import Foundation
 
+// delegate to update weather 
+protocol WeatherManagerDelegate {
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel)
+    func didFailWithError(error: Error)
+}
+
 struct WeatherManager{
     let weatherURL = "https://api.darksky.net/forecast/\(Constants.apiKey)/"
     
     //SF Coordinates 37.773972,-122.4194
     
+    var delegate: WeatherManagerDelegate? 
+    
     func fetchWeather(latitude: Double, longitude: Double){
         
         // Create URL
         let urlString = "\(weatherURL)\(latitude),\(longitude)"
-        performRequestion(urlString: urlString)
+        performRequestion(with: urlString)
     }
     
-    func performRequestion(urlString: String){
+    func performRequestion(with urlString: String){
         if let url = URL(string: urlString) {
             
             // Create URLSession
@@ -29,13 +37,15 @@ struct WeatherManager{
             // Give session a task
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil {
-                    print(error!)
+                    self.delegate?.didFailWithError(error: error!)
+                    // print(error!)
                     return
                 }
-                
                 // if no errors, see data
                 if let safeData = data {
-                    let weather = self.parseJSON(weatherData: safeData)
+                    if let weather = self.parseJSON(safeData) {
+                        self.delegate?.didUpdateWeather(self, weather: weather)
+                    }
                 }
             }
             
@@ -45,7 +55,7 @@ struct WeatherManager{
     }
 
     // Convert JSON to Swift
-    func parseJSON(weatherData: Data) {
+    func parseJSON(_ weatherData: Data) -> WeatherModel? {
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
@@ -53,13 +63,14 @@ struct WeatherManager{
             let condition = decodedData.currently.summary
             let weatherIcon = decodedData.currently.icon
             
-            
             let weather = WeatherModel(weatherIcon: weatherIcon, temperature: temperature, condition: condition)
-            
-            print(weather.ConditionName)
+            // print(weather.ConditionName)
+            return weather
             
         } catch {
-            print(error)
+            //print(error)
+            delegate?.didFailWithError(error: error)
+            return nil
         }
     }
     
