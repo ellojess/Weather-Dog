@@ -14,7 +14,44 @@ struct WeatherManager{
     //SF Coordinates 37.773972,-122.4194
     
     func fetchWeather(latitude: Double, longitude: Double){
+        
+        // Create URL
         let urlString = "\(weatherURL)\(latitude),\(longitude)"
+        performRequestion(urlString: urlString)
     }
     
+    func performRequestion(urlString: String){
+        if let url = URL(string: urlString) {
+            
+            // Create URLSession
+            let session = URLSession(configuration: .default)
+            
+            // Give session a task
+            let task = session.dataTask(with: url) { (data, response, error) in
+                if error != nil {
+                    print(error!)
+                    return
+                }
+                
+                // if no errors, see data
+                if let safeData = data {
+                    self.parseJSON(weatherData: safeData)
+                }
+            }
+            
+            // Start task
+            task.resume()
+        }
+    }
+
+    // Convert JSON to Swift
+    func parseJSON(weatherData: Data) {
+        let decoder = JSONDecoder()
+        do {
+            let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
+            print(decodedData.name)
+        } catch {
+            print(error)
+        }
+    }
 }
