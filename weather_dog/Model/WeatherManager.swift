@@ -35,7 +35,7 @@ struct WeatherManager{
                 
                 // if no errors, see data
                 if let safeData = data {
-                    self.parseJSON(weatherData: safeData)
+                    let weather = self.parseJSON(weatherData: safeData)
                 }
             }
             
@@ -49,9 +49,21 @@ struct WeatherManager{
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
-            print(decodedData.name)
+            let temperature = decodedData.currently.temperature // JSON path for temp from Dark Sky
+            let condition = decodedData.currently.summary
+            let weatherIcon = decodedData.currently.icon
+            
+            
+            let weather = WeatherModel(weatherIcon: weatherIcon, temperature: temperature, condition: condition)
+            
+            print(weather.ConditionName)
+            
         } catch {
             print(error)
         }
     }
+    
+ 
+
+    
 }
