@@ -41,9 +41,6 @@ class ReminderViewController: UIViewController{
         super.viewDidLoad()
     }
     
-//    @IBAction func checkBoxTapped(_ sender: UIButton) {
-//    }
-    
     
     
 }
@@ -51,7 +48,15 @@ class ReminderViewController: UIViewController{
 class ReminderViewCell: UITableViewCell{
     
     @IBAction func checkBoxTapped(_ sender: UIButton) {
+        
+        if sender.isSelected {
+            sender.isSelected = false
+        } else {
+            sender.isSelected = true
+        }
     }
+    
+    
     
 }
 
