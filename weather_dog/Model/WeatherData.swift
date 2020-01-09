@@ -10,15 +10,24 @@
 
 import Foundation
 
-struct WeatherData: Decodable {
+struct WeatherData: Codable {
     let name: String
-    let currently: Currently
+//    let currently: Currently // Dark Sky
+    let main: Main // Open Weather
+    let weather: [Weather]
 }
 
-struct Currently: Decodable {
-    let temperature: Double
-    let summary: String
-    let icon: String
+//struct Currently: Codable {
+//    let temperature: Double
+//    let summary: String
+//    let icon: String
+//}
+
+struct Main: Codable {
+    let temp: Double
 }
 
-
+struct Weather: Codable {
+    let description: String
+    let id: Int
+}

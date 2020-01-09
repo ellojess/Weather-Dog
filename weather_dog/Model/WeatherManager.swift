@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreLocation
 
 // delegate to update weather 
 protocol WeatherManagerDelegate {
@@ -14,21 +15,29 @@ protocol WeatherManagerDelegate {
     func didFailWithError(error: Error)
 }
 
+// fetch weather data from APIs (Open weather and Dark Sky) 
 struct WeatherManager{
-    let weatherURL = "https://api.darksky.net/forecast/\(Constants.apiKey)/"
+    let weatherURLDark = "https://api.darksky.net/forecast/\(Constants.apiKey)/"
+    let weatherURLOpen = "https://api.openweathermap.org/data/2.5/weather?appid=\(Constants.apiKey1)&units=imperial"
     
-    //SF Coordinates 37.773972,-122.4194
+    //SF Coordinates 37.773972,-122.4194 for Dark Sky
     
     var delegate: WeatherManagerDelegate? 
     
-    func fetchWeather(latitude: Double, longitude: Double){
+    func fetchWeather(cityName: String){
         
         // Create URL
-        let urlString = "\(weatherURL)\(latitude),\(longitude)"
-        performRequestion(with: urlString)
+        let urlString = "\(weatherURLOpen)&q=\(cityName)"
+        performRequest(with: urlString)
+        print(urlString)
     }
     
-    func performRequestion(with urlString: String){
+    func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+        let urlString = "\(weatherURLOpen)&lat=\(latitude)&lon=\(longitude)"
+        performRequest(with: urlString)
+    }
+    
+    func performRequest(with urlString: String){
         if let url = URL(string: urlString) {
             
             // Create URLSession
@@ -59,16 +68,22 @@ struct WeatherManager{
         let decoder = JSONDecoder()
         do {
             let decodedData = try decoder.decode(WeatherData.self, from: weatherData)
-            let temperature = decodedData.currently.temperature // JSON path for temp from Dark Sky
-            let condition = decodedData.currently.summary
-            let weatherIcon = decodedData.currently.icon
+            let id = decodedData.weather[0].id
+            let temp = decodedData.main.temp
+            let name = decodedData.name
+//
+//            let temperature = decodedData.currently.temperature // JSON path for temp from Dark Sky
+//            let condition = decodedData.currently.summary
+//            let weatherIcon = decodedData.currently.icon
+    
+//            let weather = WeatherModel(weatherIcon: weatherIcon, temperature: temperature, condition: condition)
+//            // print(weather.ConditionName)
+//            return weather
             
-            let weather = WeatherModel(weatherIcon: weatherIcon, temperature: temperature, condition: condition)
-            // print(weather.ConditionName)
+            let weather = WeatherModel(cityName: name, conditionId: id, temperature: temp)
             return weather
             
         } catch {
-            //print(error)
             delegate?.didFailWithError(error: error)
             return nil
         }
