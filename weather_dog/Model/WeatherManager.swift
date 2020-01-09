@@ -71,6 +71,7 @@ struct WeatherManager{
             let id = decodedData.weather[0].id
             let temp = decodedData.main.temp
             let name = decodedData.name
+            let time = decodedData.timezone
 //
 //            let temperature = decodedData.currently.temperature // JSON path for temp from Dark Sky
 //            let condition = decodedData.currently.summary
@@ -80,7 +81,7 @@ struct WeatherManager{
 //            // print(weather.ConditionName)
 //            return weather
             
-            let weather = WeatherModel(cityName: name, conditionId: id, temperature: temp)
+            let weather = WeatherModel(cityName: name, conditionId: id, temperature: temp, timezone: time)
             return weather
             
         } catch {

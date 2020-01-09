@@ -34,7 +34,7 @@ class WeatherViewController: UIViewController {
         // Present date in UILabel
         let currentDate = Date()
         let formatter = DateFormatter()
-        formatter.dateStyle = .short
+        formatter.dateFormat = "LLLL d"
         dateLabel.text = formatter.string(from: currentDate)
         
         // Present current time in UILabel
@@ -69,13 +69,10 @@ extension WeatherViewController: UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        
         if let city = searchTextField.text {
             weatherManager.fetchWeather(cityName: city)
         }
-        
         searchTextField.text = ""
-        
     }
 }
 
@@ -89,6 +86,7 @@ extension WeatherViewController: WeatherManagerDelegate {
             self.temperatureLabel.text = weather.temperatureString
             self.conditionImageView.image = UIImage(systemName: weather.conditionName)
             self.cityLabel.text = weather.cityName
+//            self.timeLabel.text = weather.timeString
         }
     }
     

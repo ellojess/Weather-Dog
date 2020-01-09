@@ -15,6 +15,7 @@ struct WeatherData: Codable {
 //    let currently: Currently // Dark Sky
     let main: Main // Open Weather
     let weather: [Weather]
+    let timezone: Int
 }
 
 //struct Currently: Codable {
@@ -31,3 +32,4 @@ struct Weather: Codable {
     let description: String
     let id: Int
 }
+
