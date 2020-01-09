@@ -30,6 +30,16 @@ class WeatherViewController: UIViewController {
         
         weatherManager.delegate = self
         searchTextField.delegate = self
+        
+        // Present date in UILabel
+        let currentDate = Date()
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        dateLabel.text = formatter.string(from: currentDate)
+        
+        // Present current time in UILabel
+        formatter.dateFormat = "hh:mm a"
+        timeLabel.text = formatter.string(from: currentDate)
     }
 
 }
