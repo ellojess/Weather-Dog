@@ -9,6 +9,12 @@
 import Foundation
 import UIKit
 
+class Reminder: UITableViewCell {
+    
+    
+    
+}
+
 //class Reminder: NSObject, NSCoding {
 //    // Properties
 //    var notification: UILocalNotification
