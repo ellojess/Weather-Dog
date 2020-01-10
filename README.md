@@ -12,7 +12,7 @@ Weather Dog ensures optimized walks by alerting owners of mal-weather (rain, sle
  **NOTE:** If you are attempting to recreate this app: sign up for [Open Weather](https://openweathermap.org/api) and [Dark Sky](https://darksky.net/dev) to obtain your own API Keys
 
  ### Preview
-![](weather_dog_screens.jpg)
+<img src="https://github.com/ellojess/weather-dog/blob/master/demo.gif" width="530" height="1000">
 
 ### Current Features 
 - Automatically see the weather in your current location 
