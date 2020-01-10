@@ -146,7 +146,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReminderCell" textLabel="gSk-EY-ZNO" detailTextLabel="l3g-O9-t0u" rowHeight="58" style="IBUITableViewCellStyleValue1" id="xLq-Be-dds" customClass="ReminderViewCell" customModule="weather_dog" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EntryCell" textLabel="gSk-EY-ZNO" detailTextLabel="l3g-O9-t0u" rowHeight="58" style="IBUITableViewCellStyleValue1" id="xLq-Be-dds" customClass="ReminderViewCell" customModule="weather_dog" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xLq-Be-dds" id="XI5-wu-sEJ">
@@ -169,6 +169,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="titleLabel" destination="gSk-EY-ZNO" id="oZL-7c-hrU"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -202,15 +205,18 @@
         <!--Add Reminder-->
         <scene sceneID="ugk-wU-nZT">
             <objects>
-                <viewController extendedLayoutIncludesOpaqueBars="YES" id="jYV-t0-ugH" sceneMemberID="viewController">
+                <viewController extendedLayoutIncludesOpaqueBars="YES" id="jYV-t0-ugH" customClass="AddReminderViewController" customModule="weather_dog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QY6-Sk-H0X">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter reminder for later" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L2c-Ya-equ">
                                 <rect key="frame" x="20" y="121" width="374" height="34"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" keyboardKey="YES"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" spellCheckingType="yes" keyboardAppearance="light" returnKeyType="continue"/>
                             </textField>
                             <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="lZx-nb-LRS">
                                 <rect key="frame" x="0.0" y="163" width="414" height="241"/>
@@ -242,11 +248,15 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="tkx-U6-w5m">
                             <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
+                                <action selector="saveButtonPressed:" destination="jYV-t0-ugH" id="bL3-6Q-pan"/>
                                 <segue destination="V4F-WX-jfe" kind="push" id="Bas-dB-8zl"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="textField" destination="L2c-Ya-equ" id="aCi-lb-nw7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9jb-h0-nho" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -281,7 +291,6 @@
         <image name="sun.max" catalog="system" width="64" height="62"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8yv-KZ-VPO"/>
         <segue reference="Bas-dB-8zl"/>
         <segue reference="QOg-c9-CUi"/>
     </inferredMetricsTieBreakers>
