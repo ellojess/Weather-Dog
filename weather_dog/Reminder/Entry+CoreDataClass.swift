@@ -6,11 +6,11 @@
 //  Copyright © 2020 Jessica Trinh. All rights reserved.
 //
 
-import Foundation
-import CoreData
-
-@objc(Entry)
-public class Entry: NSManagedObject {
-
-}
+//import Foundation
+//import CoreData
+//
+//@objc(Entry)
+//public class Entry: NSManagedObject {
+//
+//}
 

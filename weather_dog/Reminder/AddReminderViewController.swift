@@ -6,14 +6,14 @@
 //  Copyright © 2020 Jessica Trinh. All rights reserved.
 //
 
-import Foundation
-import UIKit
-
-class AddReminderViewController: UIViewController {
-    
-    @IBOutlet weak var textField: UITextField!
-    
-    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
-        guard textField.text != nil else {return}
-    }
-}
+//import Foundation
+//import UIKit
+//
+//class AddReminderViewController: UIViewController {
+//    
+//    @IBOutlet weak var textField: UITextField!
+//    
+//    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+//        guard textField.text != nil else {return}
+//    }
+//}
