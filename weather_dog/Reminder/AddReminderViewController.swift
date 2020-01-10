@@ -7,3 +7,13 @@
 //
 
 import Foundation
+import UIKit
+
+class AddReminderViewController: UIViewController {
+    
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBAction func saveButtonPressed(_ sender: UIBarButtonItem) {
+        guard textField.text != nil else {return}
+    }
+}

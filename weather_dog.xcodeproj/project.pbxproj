@@ -8,11 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		C02B5ACB23C43E2B00746AB1 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02B5ACA23C43E2B00746AB1 /* Reminder.swift */; };
+		C02F456323C84B3F0033459D /* EntryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F456223C84B3F0033459D /* EntryController.swift */; };
+		C02F456523C84B820033459D /* Entry+Convenience.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F456423C84B820033459D /* Entry+Convenience.swift */; };
+		C02F456723C84EEE0033459D /* EntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F456623C84EEE0033459D /* EntryTableViewCell.swift */; };
+		C02F489023C850DA00A7910E /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F488F23C850DA00A7910E /* CoreDataStack.swift */; };
+		C02F489323C8511F00A7910E /* Reminder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C02F489123C8511F00A7910E /* Reminder.xcdatamodeld */; };
+		C02F489723C8539100A7910E /* Entry+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F489623C8539100A7910E /* Entry+CoreDataClass.swift */; };
+		C02F489923C8540700A7910E /* EntryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02F489823C8540700A7910E /* EntryDetailViewController.swift */; };
 		C03BCB8723C52884009E4430 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BCB8623C52884009E4430 /* WeatherManager.swift */; };
 		C03BCB8923C52E1B009E4430 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BCB8823C52E1B009E4430 /* Constants.swift */; };
 		C03BCB8B23C5754A009E4430 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BCB8A23C5754A009E4430 /* LocationManager.swift */; };
 		C03BCB8D23C595AF009E4430 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BCB8C23C595AF009E4430 /* WeatherData.swift */; };
 		C03BCB8F23C5BE8B009E4430 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C03BCB8E23C5BE8B009E4430 /* WeatherModel.swift */; };
+		C085C74423C8467A00A870D4 /* AddReminderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C085C74323C8467A00A870D4 /* AddReminderViewController.swift */; };
 		C0EA63C2237B4F88009DAB86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EA63C1237B4F88009DAB86 /* AppDelegate.swift */; };
 		C0EA63C4237B4F88009DAB86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0EA63C3237B4F88009DAB86 /* SceneDelegate.swift */; };
 		C0EA63C8237B4F8B009DAB86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0EA63C7237B4F8B009DAB86 /* Assets.xcassets */; };
@@ -24,11 +32,19 @@
 
 /* Begin PBXFileReference section */
 		C02B5ACA23C43E2B00746AB1 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		C02F456223C84B3F0033459D /* EntryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryController.swift; sourceTree = "<group>"; };
+		C02F456423C84B820033459D /* Entry+Convenience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+Convenience.swift"; sourceTree = "<group>"; };
+		C02F456623C84EEE0033459D /* EntryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryTableViewCell.swift; sourceTree = "<group>"; };
+		C02F488F23C850DA00A7910E /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		C02F489223C8511F00A7910E /* Reminder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Reminder.xcdatamodel; sourceTree = "<group>"; };
+		C02F489623C8539100A7910E /* Entry+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Entry+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C02F489823C8540700A7910E /* EntryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailViewController.swift; sourceTree = "<group>"; };
 		C03BCB8623C52884009E4430 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
 		C03BCB8823C52E1B009E4430 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		C03BCB8A23C5754A009E4430 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		C03BCB8C23C595AF009E4430 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
 		C03BCB8E23C5BE8B009E4430 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
+		C085C74323C8467A00A870D4 /* AddReminderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReminderViewController.swift; sourceTree = "<group>"; };
 		C0EA63BE237B4F88009DAB86 /* weather_dog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weather_dog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0EA63C1237B4F88009DAB86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C0EA63C3237B4F88009DAB86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +71,13 @@
 			isa = PBXGroup;
 			children = (
 				C02B5ACA23C43E2B00746AB1 /* Reminder.swift */,
+				C02F456623C84EEE0033459D /* EntryTableViewCell.swift */,
+				C02F489823C8540700A7910E /* EntryDetailViewController.swift */,
+				C02F489123C8511F00A7910E /* Reminder.xcdatamodeld */,
+				C085C74323C8467A00A870D4 /* AddReminderViewController.swift */,
+				C02F456223C84B3F0033459D /* EntryController.swift */,
+				C02F456423C84B820033459D /* Entry+Convenience.swift */,
+				C02F489623C8539100A7910E /* Entry+CoreDataClass.swift */,
 			);
 			path = Reminder;
 			sourceTree = "<group>";
@@ -62,6 +85,7 @@
 		C0EA63B5237B4F88009DAB86 = {
 			isa = PBXGroup;
 			children = (
+				C02F488F23C850DA00A7910E /* CoreDataStack.swift */,
 				C0EA63C0237B4F88009DAB86 /* weather_dog */,
 				C0EA63BF237B4F88009DAB86 /* Products */,
 			);
@@ -200,10 +224,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C02F456723C84EEE0033459D /* EntryTableViewCell.swift in Sources */,
+				C085C74423C8467A00A870D4 /* AddReminderViewController.swift in Sources */,
+				C02F456323C84B3F0033459D /* EntryController.swift in Sources */,
+				C02F489923C8540700A7910E /* EntryDetailViewController.swift in Sources */,
 				C0EA63C2237B4F88009DAB86 /* AppDelegate.swift in Sources */,
 				C0EA63DB237B5039009DAB86 /* WeatherViewController.swift in Sources */,
+				C02F489323C8511F00A7910E /* Reminder.xcdatamodeld in Sources */,
+				C02F456523C84B820033459D /* Entry+Convenience.swift in Sources */,
 				C03BCB8723C52884009E4430 /* WeatherManager.swift in Sources */,
+				C02F489023C850DA00A7910E /* CoreDataStack.swift in Sources */,
 				C03BCB8B23C5754A009E4430 /* LocationManager.swift in Sources */,
+				C02F489723C8539100A7910E /* Entry+CoreDataClass.swift in Sources */,
 				C03BCB8F23C5BE8B009E4430 /* WeatherModel.swift in Sources */,
 				C0EA63C4237B4F88009DAB86 /* SceneDelegate.swift in Sources */,
 				C02B5ACB23C43E2B00746AB1 /* Reminder.swift in Sources */,
@@ -402,6 +434,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C02F489123C8511F00A7910E /* Reminder.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C02F489223C8511F00A7910E /* Reminder.xcdatamodel */,
+			);
+			currentVersion = C02F489223C8511F00A7910E /* Reminder.xcdatamodel */;
+			path = Reminder.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C0EA63B6237B4F88009DAB86 /* Project object */;
 }
