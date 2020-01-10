@@ -6,9 +6,79 @@
 //  Copyright © 2020 Jessica Trinh. All rights reserved.
 //
 
-//import Foundation
-//import UIKit
+import Foundation
+import UIKit
+
+class Reminder: UITableViewController {
+    
+    let titles = ["1","2"]
+    
+    override func viewWillAppear(_ animated: Bool) {
+            super.viewWillAppear(animated)
+            print("Loading tableview")
+                tableView.delegate = self
+            tableView.dataSource = self
+                   tableView.reloadData()
+           
+        }
+
+        override func viewDidLoad() {
+            super.viewDidLoad()
+            
+           print("Loading tableview")
+                      tableView.delegate = self
+            tableView.dataSource = self
+                         tableView.reloadData()
+            
+    }
+    
+    
+}
+
+extension Reminder {
+    //let entryController = EntryController()
+    
+
+    // MARK: - Table view data source
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 30
+    }
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EntryCell", for: indexPath) as! EntryTableViewCell
+
+        cell.titleLabel.text = ""
+
+        return cell
+    }
+
+
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            let entry = entryController.entries[indexPath.row]
+//            entryController.delete(entry: entry)
+//            tableView.reloadData()
+//        }
+    }
+
+    // MARK: - Navigation
+
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let detailVC = segue.destination as? EntryDetailViewController else { return }
+//        detailVC.entryController = entryController
 //
+//        if segue.identifier == "ViewExistingEntry" {
+//            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+//            let entry = entryController.entries[indexPath.row]
+//            detailVC.entry = entry
+//        }
+//    }
+
+}
+
 //class Reminder: UITableViewController {
 //    let entryController = EntryController()
 //

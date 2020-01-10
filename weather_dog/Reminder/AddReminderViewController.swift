@@ -6,10 +6,14 @@
 //  Copyright © 2020 Jessica Trinh. All rights reserved.
 //
 
-//import Foundation
-//import UIKit
-//
-//class AddReminderViewController: UIViewController {
+import Foundation
+import UIKit
+
+class AddReminderViewController: UIViewController {
+    
+    
+
+}
 //    
 //    @IBOutlet weak var textField: UITextField!
 //    

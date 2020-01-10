@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="982-BJ-yev">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rwN-Du-dAz">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
@@ -146,7 +146,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EntryCell" textLabel="gSk-EY-ZNO" detailTextLabel="l3g-O9-t0u" rowHeight="58" style="IBUITableViewCellStyleValue1" id="xLq-Be-dds" customClass="ReminderViewCell" customModule="weather_dog" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="EntryCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EntryCell" textLabel="gSk-EY-ZNO" detailTextLabel="l3g-O9-t0u" rowHeight="58" style="IBUITableViewCellStyleValue1" id="xLq-Be-dds" customClass="EntryTableViewCell" customModule="weather_dog" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="58"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xLq-Be-dds" id="XI5-wu-sEJ">
@@ -169,13 +169,13 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration" identifier="EntryCell"/>
                                 <connections>
-                                    <outlet property="titleLabel" destination="gSk-EY-ZNO" id="oZL-7c-hrU"/>
+                                    <outlet property="titleLabel" destination="gSk-EY-ZNO" id="0su-04-QST"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="V4F-WX-jfe" id="QYa-xV-jSr"/>
                             <outlet property="delegate" destination="V4F-WX-jfe" id="WgY-Dz-bAV"/>
                         </connections>
                     </tableView>
@@ -192,7 +192,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="kpW-Z8-8IB">
                             <color key="tintColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <segue destination="jYV-t0-ugH" kind="push" id="8yv-KZ-VPO"/>
+                                <segue destination="jYV-t0-ugH" kind="show" id="8yv-KZ-VPO"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -287,8 +287,8 @@
         <image name="sun.max" catalog="system" width="64" height="62"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Bas-dB-8zl"/>
-        <segue reference="Oqe-mO-eYY"/>
+        <segue reference="Yqh-Yq-xjW"/>
+        <segue reference="QOg-c9-CUi"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
