@@ -51,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C085C74223C803EA00A870D4 /* Reminder */ = {
+			isa = PBXGroup;
+			children = (
+				C02B5ACA23C43E2B00746AB1 /* Reminder.swift */,
+			);
+			path = Reminder;
+			sourceTree = "<group>";
+		};
 		C0EA63B5237B4F88009DAB86 = {
 			isa = PBXGroup;
 			children = (
@@ -73,6 +81,7 @@
 				C0EA63C1237B4F88009DAB86 /* AppDelegate.swift */,
 				C0EA63C3237B4F88009DAB86 /* SceneDelegate.swift */,
 				C0EA63DE237B506F009DAB86 /* Model */,
+				C085C74223C803EA00A870D4 /* Reminder */,
 				C0EA63D5237B4FC5009DAB86 /* View */,
 				C0EA63D7237B4FF5009DAB86 /* Controller */,
 				C0EA63C7237B4F8B009DAB86 /* Assets.xcassets */,
@@ -103,7 +112,6 @@
 			isa = PBXGroup;
 			children = (
 				C0EA63DA237B5039009DAB86 /* WeatherViewController.swift */,
-				C02B5ACA23C43E2B00746AB1 /* Reminder.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
