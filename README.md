@@ -21,6 +21,7 @@ Weather Dog ensures optimized walks by alerting owners of mal-weather (rain, sle
 
 ### Features to Look Forward To 
 - GeoMap of incoming storms and current weather 
-- 
+- More data on the weather (level of precipitation, humidity, etc) 
+- Suggestion for the best time to walk your pet within a two hour window 
 
 **Coming soon to App Store!**
